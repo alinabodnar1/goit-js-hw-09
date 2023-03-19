@@ -17,11 +17,11 @@ function handleSubmit(event) {
   
   for (let position = 1; position <= amountPromise; position += 1) {
       createPromise(position, delayPromise)
-        .then(({ position, delayPromise }) => {
-          Notify.success(`✅ Fulfilled promise ${position} in ${delayPromise} ms`);
+        .then(({ position, delay }) => {
+          Notify.success(`✅ Fulfilled promise ${position} in ${delay} ms`);
         })
-        .catch(({ position, delayPromise }) => {
-          Notify.failure(`❌ Rejected promise ${position} in ${delayPromise} ms`);
+        .catch(({ position, delay }) => {
+          Notify.failure(`❌ Rejected promise ${position} in ${delay} ms`);
         });
     delayPromise += stepPromise;
   }
