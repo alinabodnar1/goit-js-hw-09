@@ -1,4 +1,4 @@
-import { number } from 'joi';
+// import { number } from 'joi';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const inputDelay = document.querySelector('input[name="delay"]');
